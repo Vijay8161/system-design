@@ -1,0 +1,20 @@
+package com.pm.systemdesign.creational.prototype;
+
+// Concrete Prototype (Circle)
+public class Circle implements Shape{
+    private final String color;
+
+    Circle(String color){
+        this.color = color;
+    }
+
+    @Override
+    public Shape clone(){
+        return new Circle(this.color);
+    }
+
+    @Override
+    public void draw(){
+        System.out.println("Drawing a "+color+" circle.");
+    }
+}
